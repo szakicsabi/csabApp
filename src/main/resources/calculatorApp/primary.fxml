@@ -1,37 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="766.0" prefWidth="766.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="384.0" prefWidth="766.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Pane id="alapPane" fx:id="alapPane" prefHeight="766.0" prefWidth="766.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Pane id="alapPane" fx:id="alapPane" prefHeight="383.0" prefWidth="766.0" AnchorPane.bottomAnchor="383.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <TextField alignment="TOP_CENTER" layoutX="303.0" layoutY="14.0" text="Határidő számítás">
+            <TextField alignment="TOP_CENTER" editable="false" layoutX="234.0" layoutY="14.0" text="Határidő számítás">
                <font>
                   <Font size="24.0" />
                </font>
-               <effect>
-                  <Bloom threshold="0.69" />
-               </effect>
             </TextField>
             <DatePicker id="startDate" fx:id="startDate" layoutX="52.0" layoutY="96.0" prefHeight="44.0" prefWidth="253.0" promptText="Add meg a kezdő dátumot" />
-            <Button id="calcButton" fx:id="calcButton" layoutX="666.0" layoutY="109.0" mnemonicParsing="false" text="Számítás" />
-            <TextField layoutX="327.0" layoutY="106.0" prefWidth="160.0" promptText="Hány napos?" text="Add meg a napok számát:" />
-            <MenuButton id="daySelect" fx:id="daySelect" layoutX="523.0" layoutY="112.0" mnemonicParsing="false" text="napok">
+            <Button id="calcButton" fx:id="calcButton" layoutX="582.0" layoutY="106.0" mnemonicParsing="false" text="Számítás" />
+            <TextField alignment="CENTER" editable="false" layoutX="327.0" layoutY="106.0" opacity="0.99" prefWidth="160.0" promptText="Hány napos?" text="Add meg a napok számát:">
+               <cursor>
+                  <Cursor fx:constant="CROSSHAIR" />
+               </cursor></TextField>
+            <MenuButton id="daySelect" fx:id="daySelect" layoutX="499.0" layoutY="106.0" mnemonicParsing="false" text="napok">
               <items>
                 <MenuItem mnemonicParsing="false" text="Action 1" />
                 <MenuItem mnemonicParsing="false" text="Action 2" />
               </items>
             </MenuButton>
+            <TextField id="calculated" fx:id="calculated" layoutX="308.0" layoutY="190.0" promptText="Határidő lejár...." />
+            <Text layoutX="328.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A határidő lejár:" textAlignment="CENTER" wrappingWidth="110.13671875" />
+            <Button id="alertButton" fx:id="alertButton" layoutX="332.0" layoutY="254.0" mnemonicParsing="false" text="Értesítést kérek!" />
          </children>
+         <effect>
+            <DropShadow />
+         </effect>
       </Pane>
    </children>
 </AnchorPane>
