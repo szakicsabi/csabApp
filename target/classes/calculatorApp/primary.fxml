@@ -22,7 +22,7 @@
                   <Bloom threshold="0.69" />
                </effect>
             </TextField>
-            <DatePicker id="startDate" fx:id="startDate" layoutX="52.0" layoutY="96.0" prefHeight="44.0" prefWidth="253.0" promptText="Add meg a kezdő dátumot" />
+            <DatePicker id="startDate" fx:id="startDate" layoutX="53.0" layoutY="96.0" prefHeight="44.0" prefWidth="253.0" promptText="Add meg a kezdő dátumot" />
             <Button id="calcButton" fx:id="calcButton" layoutX="666.0" layoutY="109.0" mnemonicParsing="false" text="Számítás" />
             <TextField layoutX="327.0" layoutY="106.0" prefWidth="160.0" promptText="Hány napos?" text="Add meg a napok számát:" />
             <MenuButton id="daySelect" fx:id="daySelect" layoutX="523.0" layoutY="112.0" mnemonicParsing="false" text="napok">
