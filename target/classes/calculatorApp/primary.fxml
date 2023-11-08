@@ -5,6 +5,7 @@
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -35,11 +36,18 @@
             </MenuButton>
             <TextField id="calculated" fx:id="calculated" layoutX="308.0" layoutY="190.0" promptText="Határidő lejár...." />
             <Text layoutX="328.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A határidő lejár:" textAlignment="CENTER" wrappingWidth="110.13671875" />
-            <Button id="alertButton" fx:id="alertButton" layoutX="332.0" layoutY="254.0" mnemonicParsing="false" text="Értesítést kérek!" />
          </children>
          <effect>
             <DropShadow />
          </effect>
       </Pane>
+      <Text layoutX="341.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Értesítést kérsz?" />
+      <Button id="saveButton" fx:id="saveButton" layoutX="352.0" layoutY="284.0" mnemonicParsing="false" text="Rögzítés" />
+      <SplitMenuButton id="yesOrNo" fx:id="yesOrNo" layoutX="318.0" layoutY="245.0" mnemonicParsing="false" text="SplitMenuButton">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+      </SplitMenuButton>
    </children>
 </AnchorPane>
